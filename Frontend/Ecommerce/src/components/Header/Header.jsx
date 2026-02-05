@@ -1,11 +1,11 @@
 import React from 'react'
-import { useState,useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom'
 
 
 // import { useSelector } from 'react-redux'
 function Header() {
-    
+
     // const authStatus = useSelector((state) => { state.auth.active });
     const navigate = useNavigate();
     const navItems = [
@@ -16,16 +16,12 @@ function Header() {
         { name: 'SALE', slug: '/sale' },
     ]
     return (
-        <header className='w-full sticky top-0 relative'>
-
-
+        <>
             <div className='bg-indigo-100 p-2 text-center text-xs  tracking-widest'>
                 FREE SHIPPING ON ORDERS OVER ₹5000 • WORLDWIDE DELIVERY
             </div>
 
-            <div className='bg-white  shadow-lg'>
-
-
+            <header className='bg-white sticky top-0 z-50'>
                 <div className='container mx-auto px-4 flex items-center h-24 relative'>
                     <div>
                         <img
@@ -47,8 +43,8 @@ function Header() {
                                 onClick={() => { navigate(item.slug) }}
                                 className={`hover:text-yellow-400 cursor-pointer transition-colors duration-300 uppercase ${item.name == 'SALE' ? 'animate-bounce bg-indigo-100 rounded-full p-3' : ''} `}
                             >
-                                {item.name} 
-                                
+                                {item.name}
+
                             </button>
 
 
@@ -84,8 +80,9 @@ function Header() {
                     </div>
 
                 </div>
-            </div>
-        </header>
+
+            </header>
+        </>
     )
 }
 
