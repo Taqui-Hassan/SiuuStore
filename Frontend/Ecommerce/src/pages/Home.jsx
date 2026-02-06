@@ -19,7 +19,7 @@ import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import {useGSAP} from '@gsap/react';
 import { Link } from 'react-router-dom';
-
+import cr7rm from '../JERSEYS/CR7RM.webp'
 import { useNavigate } from 'react-router-dom';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -94,13 +94,14 @@ function Home() {
           <p className='text-xl md:text-2xl font-light mb-8'>
             Official CR7 Match Kits & Training Gear
           </p>
-          <Link to={'/ShoppingPage'}>
+          
 
-            <button className='bg-yellow-400 text px-8 py-3 rounded-full font-bold hover:scale-105 transition-transform cursor-pointer'
+            <button
+            onClick={()=>{helperNavigate('Official CR7 2017 Real Madrid Jersey',cr7rm)}} className='bg-yellow-400 text px-8 py-3 rounded-full font-bold hover:scale-105 transition-transform cursor-pointer'
             >
               SHOP NOW
             </button>
-          </Link>
+          
         </div>
       </div>
 
