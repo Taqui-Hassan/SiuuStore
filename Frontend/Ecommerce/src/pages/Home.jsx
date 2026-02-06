@@ -19,7 +19,7 @@ import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import {useGSAP} from '@gsap/react';
 import { Link } from 'react-router-dom';
-import ShoppingPage from '../components/shoppingPage/shoppingPage';
+
 import { useNavigate } from 'react-router-dom';
 
 gsap.registerPlugin(ScrollTrigger);
