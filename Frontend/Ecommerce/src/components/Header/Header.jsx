@@ -3,10 +3,10 @@ import { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom'
 
 
-// import { useSelector } from 'react-redux'
+
 function Header() {
 
-    // const authStatus = useSelector((state) => { state.auth.active });
+
     const navigate = useNavigate();
     const navItems = [
 
@@ -32,7 +32,7 @@ function Header() {
 
                     </div>
 
-                    <nav className='hidden md:flex items-center gap-8 font-semibold text-sm tracking-wide absolute left-1/2 transform -translate-x-1/2'>
+                    <nav className='md:flex items-center gap-8 font-semibold text-sm tracking-wide absolute left-1/2 transform -translate-x-1/2'>
 
 
 

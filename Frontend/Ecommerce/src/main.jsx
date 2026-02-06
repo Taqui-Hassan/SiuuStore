@@ -11,6 +11,7 @@ import Sale from './pages/Sale.jsx'
 import Training from './pages/Training.jsx'
 import store from './store/store.js'
 import { Provider } from 'react-redux'
+import ShoppingPage from './components/ShoppingPage/ShoppingPage.jsx'
 const router = createBrowserRouter([
 
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
   , {
     path: 'training',
     element: <Training />
+  },
+  {
+    path: 'ShoppingPage',
+    element: <ShoppingPage />
   }
 
 ]);
