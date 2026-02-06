@@ -32,7 +32,7 @@
 import React from 'react'
 import { useLocation, Link } from 'react-router-dom' // 1. Import useLocation
 import Footer from '../Footer/Footer'
-import Header from '../Header/header'
+import Header from '../Header/Header.jsx'
 
 function ShoppingPage() { // 2. Remove {id, image} from here. It comes from location!
 
