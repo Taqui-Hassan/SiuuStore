@@ -106,7 +106,7 @@ function Home() {
       </div>
 
 
-      <div className={`container mx-auto px-4 relative group transition-all duration-1000 ease-out ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+      <div id='jerseys' className={`container mx-auto px-4 relative group transition-all duration-1000 ease-out ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
 
         <h2 className='text-2xl font-bold text-blue-900 mb-4 px-2'>Trending Jerseys</h2>
 
@@ -161,7 +161,7 @@ function Home() {
 
       </div>
 
-      <div className={`container mx-auto px-4 relative group transition-all duration-1000 ease-out ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+      <div id='boots' className={`container mx-auto px-4 relative group transition-all duration-1000 ease-out ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
 
         <h2 className='text-2xl font-bold text-blue-900 mb-4 px-2'>Trending Boots</h2>
 

@@ -1,33 +1,57 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
-import { useNavigate, Link } from 'react-router-dom'
+import { useNavigate, Link, useLocation } from 'react-router-dom'
 
 
 
 function Header() {
 
-
+    const location = useLocation();
     const navigate = useNavigate();
     const navItems = [
 
-        { name: 'JERSEYS', slug: '/jerseys' },
-        { name: 'BOOTS', slug: '/boots' },
+        { name: 'JERSEYS', id: 'jerseys' },
+        { name: 'BOOTS', id: 'boots' },
         { name: 'TRAINING', slug: '/training' },
         { name: 'SALE', slug: '/sale' },
+        
     ]
+    
+    const hadleScroll = (sectionId) => {
+       
+
+       
+       
+        if (location.pathname !== '/') {
+          
+            navigate('/')
+            setTimeout(() => {
+                const element = document.getElementById(sectionId);
+         
+                if (element) element.scrollIntoView({ behavior: 'smooth' })
+
+            }, 100)
+        } else {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+
+        }
+    }
     return (
         <>
-            <div className='bg-indigo-100 p-2 text-center text-xs  tracking-widest'>
+            <div id='heading' className='bg-indigo-100 p-2 text-center text-xs  tracking-widest'>
                 FREE SHIPPING ON ORDERS OVER ₹5000 • WORLDWIDE DELIVERY
             </div>
 
             <header className='bg-white sticky top-0 z-50'>
                 <div className='container mx-auto px-4 flex items-center h-24 relative'>
                     <div>
-                        <img
+                        <img onClick={()=>{hadleScroll('heading')}} 
                             src="/SiuuStoreLogo.png"
                             alt="SiuuStore Logo"
-                            className='h-30 w-auto object-contain'
+                            className='h-30 w-auto object-contain cursor-pointer'
                         />
 
                     </div>
@@ -40,7 +64,7 @@ function Header() {
 
 
                             <button
-                                onClick={() => { navigate(item.slug) }}
+                                onClick={() => hadleScroll(item.id)}
                                 className={`hover:text-yellow-400 cursor-pointer transition-colors duration-300 uppercase ${item.name == 'SALE' ? 'animate-bounce bg-indigo-100 rounded-full p-3' : ''} `}
                             >
                                 {item.name}
